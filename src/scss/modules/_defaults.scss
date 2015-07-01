@@ -1,8 +1,9 @@
 * {
-  /*box-sizing: border-box;
+  box-sizing: border-box;
   font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;*/
+  text-rendering: optimizeLegibility;
 }
 body {
   background: $color-white;
+  font-family: $font-body;
 }
