@@ -1,6 +1,12 @@
 .nav {
+  background-color: $color-green-middle;
+  width: 100%;
+  margin: 0 auto;
+  padding:0;
   ul {
     list-style: none;
+    padding: 0;
+    margin: 0 auto;
   }
   li {
 
@@ -8,7 +14,9 @@
   a {
     text-decoration: none;
     color: $color-text-white;
-    background-color: $color-green-middle;
+    display: block;
+    width: 100%;
+    padding: 1em;
     &:hover {
 			background: $color-green-strong;
 			color: $color-text-white;
