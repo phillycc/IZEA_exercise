@@ -1,15 +1,18 @@
 .nav {
-
   ul {
-
     list-style: none;
   }
-
   li {
-    color: $color-text-white;
-  }
 
+  }
   a {
-
+    text-decoration: none;
+    color: $color-text-white;
+    background-color: $color-green-middle;
+    &:hover {
+			background: $color-green-strong;
+			color: $color-text-white;
+		}
   }
+
 }
