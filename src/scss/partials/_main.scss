@@ -3,23 +3,23 @@
     width:80%;
     position:relative;
     float:right;
-    border:1px solid black;
     article {
       width:60%;
       float: left;
       padding: 0 2em 2ex 2em;
-      border:1px solid black;
       h2 {
-        margin: 1.2ex 0;
+        padding-top: 1.5ex;
+        font-size: 36pt;
+        font-weight: 700;
         color: $color-text-black;
-        font-size: 32pt;
-        font-weight: 600;
-        text-align: center;
+        text-align: left;
         letter-spacing: normal;
       }
       h3 {
         color: $color-text-gray2;
-        font-size: 20pt;
+        font-size: 18pt;
+        font-weight: 600;
+        margin:0.1ex 0 2ex 0;
       }
       h4 {
         position: absolute;
@@ -30,21 +30,22 @@
         padding: 20px;
         color: $color-text-white;
         margin: 0;
-        font-size: 16pt;
+        font-size: 18pt;
+        font-weight: 300;
       }
       .image-header {
         margin: 10px 0;
         max-width: 100%;
-        height: 200px;
-        border:1px solid black;
+        height: 180px;
         background-image: url('../../assets/img/wallart.png');
         background-size: cover;
         position: relative;
       }
       .article-text {
-        margin: 3ex 0;
-        font-size: 16pt;
+        margin: 3.2ex 0;
+        font-size: 17pt;
         color: $color-text-gray;
+        line-height: 30px;
       }
       button {
         background-color: $color-green-light;
