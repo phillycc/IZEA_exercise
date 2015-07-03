@@ -3,8 +3,12 @@
     width:80%;
     position:relative;
     float:right;
+    border:1px solid black;
     article {
+      width:60%;
+      float: left;
       padding: 0 2em 2ex 2em;
+      border:1px solid black;
       h2 {
         margin: 1.2ex 0;
         color: $color-text-black;
@@ -50,5 +54,10 @@
         border: 0;
         padding: 15px;
       }
+    }
+    aside {
+      float:right;
+      width:40%;
+      border:1px solid black;
     }
 }
