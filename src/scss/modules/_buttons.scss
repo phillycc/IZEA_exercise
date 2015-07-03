@@ -1,0 +1,12 @@
+button, .btn {
+  background-color: $color-green-light;
+  color: $color-text-white;
+  font-size: 18pt;
+  font-weight: 600;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
