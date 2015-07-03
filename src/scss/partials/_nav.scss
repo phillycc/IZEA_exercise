@@ -12,11 +12,13 @@
 
   }
   a {
+    font-size: 18pt;
+    font-weight: 300;
     text-decoration: none;
     color: $color-text-white;
     display: block;
     width: 100%;
-    padding: 1em;
+    padding: 0.85em;
     &:hover {
 			background: $color-green-strong;
 			color: $color-text-white;
