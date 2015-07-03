@@ -58,6 +58,28 @@
     aside {
       float:right;
       width:40%;
-      border:1px solid black;
-    }
+      img {
+        width:80px;
+        margin-right:0.5em;
+        float:left;
+        height:auto;
+      }
+      .moreinfo {
+         margin-left:80px;
+         line-height:3.5ex;
+         h3 {
+           color:$color-text-gray2;
+           font-weight:600;
+           font-size:18pt;
+         }
+         p {
+           color:$color-text-gray;
+           font-size:18pt;
+         }
+         a {
+           color:$color-text-blue;
+           font-size:15pt;
+         }
+      }
+  }
 }
