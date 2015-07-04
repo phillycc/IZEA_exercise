@@ -6,9 +6,7 @@
     left:0px;
     bottom:0px;
     position:absolute;
-    box-shadow:         0px 0px 15px #000;
-    -webkit-box-shadow: 0px 0px 15px #000;
-    -moz-box-shadow:    0px 0px 15px #000;
+    @include boxshadow(0, 0, 15px, #000);
     @include respond-to('mobile') {
         display: none;
     }

@@ -5,3 +5,12 @@
     -moz-border-radius: $radius;
     border-radius: $radius;
 }
+
+@mixin boxshadow($horizOffset, $vertOffset, $blur, $color) {
+    -o-box-shadow: $horizOffset $vertOffset $blur $color;
+    -ms-box-shadow: $horizOffset $vertOffset $blur $color;
+    -webkit-box-shadow: $horizOffset $vertOffset $blur $color;
+    -moz-box-shadow: $horizOffset $vertOffset $blur $color;
+    box-shadow: $horizOffset $vertOffset $blur $color;
+    border-collapse: separate;
+}
