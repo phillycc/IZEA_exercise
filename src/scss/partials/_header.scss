@@ -1,14 +1,26 @@
 .header {
     width: 100%;
-    padding: 4.5ex 0;
+    padding: 4.3ex 0;
     background-color: $color-green-strong;
+    @include respond-to('mobile') {
+        padding: 3.5ex 0 !important;
+    }
+    @include respond-to('tablet') {
+        display: none;
+    }
+    @include respond-to('desktop') {
+        display: none;
+    }
     h1 {
       font-family: $font-heading;
       color: $color-text-white;
-      font-size: 32pt;
+      font-size: 38pt;
       font-weight: 600;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: normal;
+      @include respond-to('mobile') {
+          font-size: 30pt !important;
+      }
     }
 }

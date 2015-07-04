@@ -2,6 +2,7 @@
 // SCSS MIXINS
 //----------------------------------*/
 
+@import 'mixins/_design.scss';
 @import 'mixins/_position.scss';
 @import 'mixins/_selection.scss';
 
@@ -19,6 +20,7 @@
 // OBJECTS & MODULES
 //----------------------------------*/
 
+@import 'modules/_breakpoints.scss';
 @import 'modules/_buttons.scss';
 @import 'modules/_inputs.scss';
 @import 'modules/_lists.scss';
@@ -27,7 +29,6 @@
 @import 'modules/_app.scss';
 
 // Enhancement modules
-@import 'modules/_breakpoints.scss';
 @import 'modules/_print.scss';
 
 //----------------------------------*\
