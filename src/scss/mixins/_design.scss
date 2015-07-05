@@ -1,4 +1,19 @@
-@mixin borderradius ($radius) {
+@mixin fontsize($sizeValue, $important: false){
+    @if $important {
+      font-size: $sizeValue + px !important;
+      font-size: (0.125 * $sizeValue) + rem !important;
+    } @else {
+      font-size: $sizeValue + px;
+      font-size: (0.125 * $sizeValue) + rem;
+    }
+}
+
+@mixin lineheight($heightValue){
+    line-height: $heightValue + px;
+    line-height: (0.125* $heightValue) + rem;
+}
+
+@mixin borderradius($radius) {
     -o-border-radius: $radius;
     -ms-border-radius: $radius;
     -webkit-border-radius: $radius;

@@ -17,14 +17,14 @@
          width:100% !important;
       }
       h2 {
-        padding-top: 1.5ex;
-        font-size: 36pt;
+        padding-top: 1ex;
+        @include fontsize(24);
+        @include lineheight(27);
         font-weight: 700;
         color: $color-text-black;
         text-align: left;
-        letter-spacing: normal;
         @include respond-to('mobile') {
-            font-size: 29pt !important;
+            @include fontsize(20, true);
             text-align: center !important;
             padding: 1.2ex 0 !important;
         }
@@ -66,13 +66,13 @@
         }
       }
       .article-text {
-        margin: 3.2ex 0;
-        font-size: 19pt;
+        margin: 2.6ex 0;
+        @include fontsize(12);
+        @include lineheight(16);
         color: $color-text-gray;
-        line-height: 30px;
         @include respond-to('mobile') {
-            font-size: 14pt !important;
-            line-height: 2.4ex !important;
+            @include fontsize(11);
+            @include lineheight(14);
             margin: 3ex 0 !important;
         }
       }
