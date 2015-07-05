@@ -1,11 +1,11 @@
 @mixin respond-to($point) {
     @if $point == 'mobile' {
-        @media only screen and (max-width: 679px) { @content; }
+        @media only screen and (max-width: 767px) { @content; }
     }
     @else if $point == 'tablet' {
-        @media only screen and (min-width: 680px) and (max-width: 979px) { @content; }
+        @media only screen and (min-width: 768px) and (max-width: 999px) { @content; }
     }
     @else if $point == 'desktop' {
-        @media only screen and (min-width: 980px) { @content; }
+        @media only screen and (min-width: 1000px) { @content; }
     }
 }
