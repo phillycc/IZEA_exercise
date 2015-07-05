@@ -12,12 +12,15 @@
     }
     h1 {
       background-color: $color-green-strong;
-      padding: 1.35ex;
+      padding: 1.3ex 15%;
       @include fontsize(24);
       @include lineheight(26);
       font-weight: 600;
       text-align: center;
       text-transform: uppercase;
+      @include respond-to('tablet') {
+          @include fontsize(20, true);
+      }
     }
     footer {
       width: 100%;

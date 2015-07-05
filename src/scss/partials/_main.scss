@@ -23,6 +23,9 @@
          font-weight: 700;
          color: $color-text-black;
          text-align: left;
+         @include respond-to('tablet') {
+             @include fontsize(22, true);
+         }
          @include respond-to('mobile') {
              @include fontsize(20, true);
              text-align: center !important;
@@ -35,6 +38,9 @@
         @include lineheight(14);
         font-weight: 600;
         margin-bottom: 2ex;
+        @include respond-to('tablet') {
+            @include fontsize(11, true);
+        }
         @include respond-to('mobile') {
             display: none;
         }
