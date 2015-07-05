@@ -57,7 +57,7 @@
         color: $color-text-white;
         font-weight: 300;
         @include respond-to('mobile') {
-            font-size: 14pt !important;
+            @include fontsize(9, true);
         }
       }
       .image-header {
