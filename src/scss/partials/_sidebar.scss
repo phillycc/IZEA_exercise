@@ -1,10 +1,10 @@
 .sidebar {
     color: $color-text-white;
     background-color: $color-green-middle;
-    width:20%;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    width: 20%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
     position:absolute;
     @include boxshadow(0, 0, 15px, #000);
     @include respond-to('mobile') {
@@ -13,18 +13,19 @@
     h1 {
       background-color: $color-green-strong;
       padding: 1.35ex;
-      font-size: 36pt;
+      @include fontsize(24);
+      @include lineheight(26);
       font-weight: 600;
       text-align: center;
       text-transform: uppercase;
-      letter-spacing: normal;
     }
     footer {
       width: 100%;
-      font-size: 12pt;
+      @include fontsize(8);
+      @include lineheight(11);
       font-weight: 300;
       text-align: center;
       position: absolute;
-      bottom: 2ex;
+      bottom: 4ex;
     }
 }
