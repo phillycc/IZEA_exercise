@@ -32,4 +32,13 @@
       position: absolute;
       bottom: 4ex;
     }
+    #nav-btn {
+      display: none;
+    }
+    #nav-btn + label {
+      background-color: #333;
+      color: #FFF;
+      padding: 20px 10px;
+      margin: 10px;
+    }
 }
