@@ -214,6 +214,30 @@ body .sidebar-toggle span {
   margin-left: -1.2em;
 }
 
+body .sidebar,
+body .sidebar-toggle {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+body .sidebar-toggle {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+body #sidebar-checkbox:checked + .sidebar {
+  z-index: 10;
+  visibility: visible;
+}
+
+body #sidebar-checkbox:checked ~ .sidebar,
+body #sidebar-checkbox:checked ~ .sidebar-toggle {
+  -ms-transform: translateX(15rem);
+  -webkit-transform: translateX(15rem);
+  transform: translateX(15rem);
+}
+
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -415,12 +439,15 @@ button,
   top: 0px;
   left: 0px;
   bottom: 0px;
-  position: absolute;
-  overflow: hidden;
+  position: fixed;
+  visibility: hidden;
+  overflow-y: auto;
   -o-box-shadow: 0 0 15px #000;
   -ms-box-shadow: 0 0 15px #000;
   box-shadow: 0 0 15px #000;
   border-collapse: separate;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 @media only screen and (max-width: 767px) {
@@ -458,17 +485,6 @@ button,
   text-align: center;
   position: absolute;
   bottom: 4ex;
-}
-
-.sidebar #nav-btn {
-  display: none;
-}
-
-.sidebar #nav-btn + label {
-  background-color: #333;
-  color: #FFF;
-  padding: 20px 10px;
-  margin: 10px;
 }
 
 .main {

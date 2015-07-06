@@ -37,3 +37,11 @@
 	     -moz-transition: $property;
 	          transition: $property;
 }
+
+@mixin transform($property) {
+          -o-transform: $property;
+         -ms-transform: $property;
+     -webkit-transform: $property;
+        -moz-transform: $property;
+             transform: $property;
+}

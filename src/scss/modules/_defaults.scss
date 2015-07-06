@@ -28,6 +28,24 @@ body {
          margin-left: -1.2em;
        }
    }
+   .sidebar, .sidebar-toggle {
+     -webkit-backface-visibility: hidden;
+         -ms-backface-visibility: hidden;
+             backface-visibility: hidden;
+   }
+
+   .sidebar-toggle {
+       @include transition(transform .5s ease-in-out)
+   }
+
+   #sidebar-checkbox:checked + .sidebar {
+       z-index: 10;
+       visibility: visible;
+   }
+   #sidebar-checkbox:checked ~ .sidebar,
+   #sidebar-checkbox:checked ~ .sidebar-toggle {
+       @include transform(translateX(15rem))
+   }
 }
 * {
    box-sizing: border-box;
