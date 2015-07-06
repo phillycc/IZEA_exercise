@@ -1,0 +1,122 @@
+.main {
+    min-height: 500px;
+    width: 80%;
+    position: relative;
+    float: right;
+    @include respond-to('mobile') {
+       width:100% !important;
+    }
+    > article {
+      width: 65%;
+      float: left;
+      padding: 0 4% 2ex 4%;
+      @include respond-to('tablet') {
+         width: 100% !important;
+      }
+      @include respond-to('mobile') {
+         width: 100% !important;
+      }
+      > h2 {
+         padding-top: 1.2ex;
+         @include fontsize(24);
+         @include lineheight(27);
+         font-weight: 700;
+         color: $color-text-black;
+         text-align: left;
+         @include respond-to('tablet') {
+             @include fontsize(22, true);
+         }
+         @include respond-to('mobile') {
+             @include fontsize(20, true);
+             text-align: center !important;
+             padding: 1ex 0 !important;
+          }
+      }
+      > h3 {
+        color: $color-text-gray2;
+        @include fontsize(12);
+        @include lineheight(14);
+        font-weight: 600;
+        margin-bottom: 2ex;
+        @include respond-to('tablet') {
+            @include fontsize(11, true);
+        }
+        @include respond-to('mobile') {
+            display: none;
+        }
+      }
+      h4 {
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(00, 36, 63, 0.4);
+        padding: 3%;
+        @include fontsize(11);
+        color: $color-text-white;
+        font-weight: 300;
+        @include respond-to('mobile') {
+            @include fontsize(9, true);
+        }
+      }
+      .image-header {
+        margin: 0;
+        max-width: 100%;
+        height: 180px;
+        background-image: url('../../assets/img/wallart.png');
+        background-size: cover;
+        position: relative;
+        @include respond-to('mobile') {
+           height: 136px !important;
+        }
+      }
+      .article-text {
+        margin: 2.6ex 0;
+        @include fontsize(12);
+        @include lineheight(16);
+        color: $color-text-gray;
+        @include respond-to('mobile') {
+            @include fontsize(11);
+            @include lineheight(14);
+            margin: 3ex 0 !important;
+        }
+      }
+    }
+    aside {
+      margin: 16ex 0;
+      float: right;
+      width: 35%;
+      @include respond-to('tablet') {
+         display: none;
+      }
+      @include respond-to('mobile') {
+         display: none;
+      }
+      img {
+        width: 5em;
+        margin: 0;
+        float: left;
+      }
+      .moreinfo {
+         margin-left: 5.3em;
+         line-height: 3.5ex;
+         h3 {
+           color:$color-text-gray2;
+           font-weight: 600;
+           @include fontsize(13);
+           @include lineheight(16);
+         }
+         p {
+           color:$color-text-gray;
+           @include fontsize(13);
+           @include lineheight(19);
+         }
+         a {
+           color:$color-text-blue;
+           @include fontsize(10);
+           @include lineheight(14);
+         }
+      }
+  }
+}

@@ -1,0 +1,34 @@
+.sidebar {
+    color: $color-text-white;
+    background-color: $color-green-middle;
+    width: 20%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    position:absolute;
+    @include boxshadow(0, 0, 15px, #000);
+    @include respond-to('mobile') {
+        display: none;
+    }
+    h1 {
+      background-color: $color-green-strong;
+      padding: 1.3ex 15%;
+      @include fontsize(24);
+      @include lineheight(26);
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      @include respond-to('tablet') {
+          @include fontsize(20, true);
+      }
+    }
+    footer {
+      width: 100%;
+      @include fontsize(8);
+      @include lineheight(11);
+      font-weight: 300;
+      text-align: center;
+      position: absolute;
+      bottom: 4ex;
+    }
+}

@@ -1,0 +1,20 @@
+/** fonts **/
+$font-heading: Helvetica, sans-serif;
+$font-body: Helvetica, sans-serif;
+
+/** base colors **/
+$color-white: #FFF;
+$color-black: #2E2E2E; /* heading */
+$color-gray-light: #8A8A8A; /* subheaders */
+$color-gray-strong: #484848; /* body */
+$color-blue: #5A9CB7; /* inline link */
+$color-green-light: #49BA6F; /* btn */
+$color-green-middle: #20A286; /* sidebar */
+$color-green-strong: #219078; /* header and sidebar-hover-states */
+
+/** text colors **/
+$color-text-white: $color-white;
+$color-text-black: $color-black;
+$color-text-gray2: $color-gray-light;
+$color-text-gray: $color-gray-strong;
+$color-text-blue: $color-blue;

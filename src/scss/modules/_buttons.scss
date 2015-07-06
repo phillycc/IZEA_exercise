@@ -1,0 +1,14 @@
+button, .btn {
+  background-color: $color-green-light;
+  color: $color-text-white;
+  @include fontsize(12);
+  font-weight: 600;
+  width: 100%;
+  border: 0;
+  padding: 0.6em;
+  @include borderradius(6px);
+  @include respond-to('mobile') {
+     @include fontsize(10, true);
+     @include borderradius(4px);
+  }
+}
