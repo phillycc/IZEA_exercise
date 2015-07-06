@@ -17,7 +17,7 @@
     <header class="header" role="banner">
         <h1>IZEA</h1>
     </header>
-
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
     <aside class="sidebar" role="complementary">
         <h1>IZEA</h1>
         <nav class="nav" role="navigation">
@@ -27,8 +27,6 @@
             <li><a href="#">Work at IZEA</a></li>
           </ul>
         </nav>
-        <input id="nav-btn" type="checkbox">
-        <label for="nav-btn">Menu</label>
         <footer>IZEA Copyright 2015</footer>
     </aside>
     <main class="main" role="main">
@@ -51,7 +49,9 @@ adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
         </div>
       </aside>
     </main>
-
+    <label for="sidebar-checkbox" class="sidebar-toggle">
+      <span>Menu</span>
+    </label>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/js/scripts.min.js"></script>

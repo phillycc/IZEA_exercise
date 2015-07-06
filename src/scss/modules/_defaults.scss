@@ -9,6 +9,25 @@ body {
    height:100%;
    width:100%;
    display:inline-block;
+   .sidebar-toggle {
+       position: absolute;
+       top:  1rem;
+       left: 2rem;
+       display: block;
+       width: 70px;
+       height: 70px;
+       background: #000;
+       color: #FFF;
+       @include fontsize(11);
+       span {
+         position: absolute;
+         display: block;
+         top: 50%;
+         margin-top: -0.5em;
+         left: 50%;
+         margin-left: -1.2em;
+       }
+   }
 }
 * {
    box-sizing: border-box;
