@@ -7,7 +7,6 @@
     bottom: 0px;
     position:absolute;
     overflow:hidden;
-    z-index:-1;
     @include boxshadow(0, 0, 15px, #000);
     @include respond-to('mobile') {
         display: none;
