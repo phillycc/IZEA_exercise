@@ -407,17 +407,17 @@ button,
   font-size: 1.5rem;
   line-height: 14px;
   line-height: 1.75rem;
+  padding: 1.5ex 8%;
   font-weight: 300;
   text-decoration: none;
   color: #FFF;
   display: block;
-  width: 100%;
-  padding: 1.5ex 8%;
 }
 
 .nav a:hover {
   background: #219078;
   color: #FFF;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 999px) {

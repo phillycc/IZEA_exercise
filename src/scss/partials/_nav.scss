@@ -11,16 +11,16 @@
   a {
     @include fontsize(12);
     @include lineheight(14);
+    padding: 1.5ex 8%;
     font-weight: 300;
     text-decoration: none;
     color: $color-text-white;
     display: block;
-    width: 100%;
-    padding: 1.5ex 8%;
     &:hover {
-			background: $color-green-strong;
-			color: $color-text-white;
-		}
+      background: $color-green-strong;
+      color: $color-text-white;
+      text-decoration: none;
+    }
     @include respond-to('tablet') {
       @include fontsize(10);
       @include lineheight(13);
