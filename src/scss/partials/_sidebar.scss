@@ -9,7 +9,6 @@
     position:absolute;
     overflow-x: hidden;
     overflow-y: auto;
-    z-index: -1;
     @include boxshadow(0, 0, 15px, #000);
     @include respond-to('mobile') {
         position: fixed !important;
@@ -17,6 +16,7 @@
         @include transform(translateX(-8em));
         @include transition(transform .3s ease);
         box-shadow: none;
+        z-index: -1;
     }
     h1 {
       background-color: $color-green-strong;
@@ -30,7 +30,7 @@
           @include fontsize(20, true);
       }
       @include respond-to('mobile') {
-          padding: 0.9ex 15%;
+          padding: 0.6ex 15%;
           visibility: hidden;
       }
     }

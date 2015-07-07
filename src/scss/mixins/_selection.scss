@@ -1,5 +1,5 @@
 @mixin selection($selection-bg: #333, $selection-c: #fff, $selection-ts: none) {
-  ::-moz-selection{
+  /*::-moz-selection{
     background: $selection-bg;
     color: $selection-c;
     text-shadow: $selection-ts;
@@ -8,5 +8,5 @@
     background: $selection-bg;
     color: $selection-c;
     text-shadow: $selection-ts;
-  }
+  }*/
 }

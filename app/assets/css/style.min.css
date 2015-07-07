@@ -288,18 +288,6 @@ button,
   font-style: normal;
 }
 
-::-moz-selection {
-  background: #333;
-  color: #fff;
-  text-shadow: none;
-}
-
-::selection {
-  background: #333;
-  color: #fff;
-  text-shadow: none;
-}
-
 @media print {
   * {
     background: transparent !important;
@@ -411,7 +399,6 @@ button,
 }
 
 .nav > ul {
-  list-style: none;
   padding: 0;
   margin: 0 auto;
 }
@@ -464,7 +451,6 @@ button,
   position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: -1;
   -o-box-shadow: 0 0 15px #000;
   -ms-box-shadow: 0 0 15px #000;
   box-shadow: 0 0 15px #000;
@@ -481,6 +467,7 @@ button,
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
     box-shadow: none;
+    z-index: -1;
   }
 }
 
@@ -505,7 +492,7 @@ button,
 
 @media only screen and (max-width: 767px) {
   .sidebar h1 {
-    padding: 0.9ex 15%;
+    padding: 0.6ex 15%;
     visibility: hidden;
   }
 }
