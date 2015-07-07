@@ -9,36 +9,33 @@ body {
    height:100%;
    width:100%;
    display:inline-block;
-   #menu-trigger, #menu-trigger + label {
+   #menu-trigger {
      display: none;
    }
-   @include respond-to('mobile') {
-       #menu-trigger + label {
-         display: block;
-         background-color: #333;
-         color: #FFF;
-         cursor: pointer;
-         padding: 20px 10px;
-         margin: 10px;
-         position: fixed;
-         top: 0;
-         left: 0;
-         z-index: 1;
-         border-radius: 8px;
-         @include transition(transform .3s ease);
-       }
-       #menu-trigger:checked + label {
-           @include transform(translateX(150px));
-       }
-       #menu-trigger:checked ~ .sidebar {
-           @include transform(translateX(0px));
-       }
-       #menu-trigger:checked ~ .main {
-           @include transform(translateX(150px));
-       }
-       .main {
-           @include transition(transform .3s ease);
-       }
+   #menu-trigger + label {
+     background-color: #333;
+     color: #FFF;
+     cursor: pointer;
+     padding: 20px 10px;
+     margin: 10px;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1;
+     @include borderradius(8px);
+     @include transition(transform .3s ease);
+   }
+   #menu-trigger:checked + label {
+       @include transform(translateX(8em));
+   }
+   #menu-trigger:checked ~ .sidebar {
+       @include transform(translateX(0));
+   }
+   #menu-trigger:checked ~ .main {
+       @include transform(translateX(8em));
+   }
+   .main {
+       @include transition(transform .3s ease);
    }
 }
 * {

@@ -1,20 +1,22 @@
 .sidebar {
     color: $color-text-white;
     background-color: $color-green-middle;
+    height: 100%;
     width: 20%;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
+    top: 0;
+    left: 0;
+    bottom: 0;
     position:absolute;
+    overflow-x: hidden;
     overflow-y: auto;
+    z-index: -1;
     @include boxshadow(0, 0, 15px, #000);
-    //width: 250px;
     @include respond-to('mobile') {
-      position: fixed;
-      top: 98px;
-      @include transition(all .27s ease-in-out);
-      @include transform(translateX(-150px));
-      box-shadow: none;
+        position: fixed !important;
+        width: 8em;
+        @include transform(translateX(-8em));
+        @include transition(transform .3s ease);
+        box-shadow: none;
     }
     h1 {
       background-color: $color-green-strong;
@@ -28,7 +30,8 @@
           @include fontsize(20, true);
       }
       @include respond-to('mobile') {
-          display: none;
+          padding: 0.9ex 15%;
+          visibility: hidden;
       }
     }
     footer {
