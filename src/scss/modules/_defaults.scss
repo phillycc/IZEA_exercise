@@ -9,42 +9,36 @@ body {
    height:100%;
    width:100%;
    display:inline-block;
-   .sidebar-toggle {
-       position: absolute;
-       top:  1rem;
-       left: 2rem;
-       display: block;
-       width: 70px;
-       height: 70px;
-       background: #000;
-       color: #FFF;
-       @include fontsize(11);
-       span {
-         position: absolute;
+   #menu-trigger, #menu-trigger + label {
+     display: none;
+   }
+   @include respond-to('mobile') {
+       #menu-trigger + label {
          display: block;
-         top: 50%;
-         margin-top: -0.5em;
-         left: 50%;
-         margin-left: -1.2em;
+         background-color: #333;
+         color: #FFF;
+         cursor: pointer;
+         padding: 20px 10px;
+         margin: 10px;
+         position: fixed;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         border-radius: 8px;
+         @include transition(transform .3s ease);
        }
-   }
-   .sidebar, .sidebar-toggle {
-     -webkit-backface-visibility: hidden;
-         -ms-backface-visibility: hidden;
-             backface-visibility: hidden;
-   }
-
-   .sidebar-toggle {
-       @include transition(transform .5s ease-in-out)
-   }
-
-   #sidebar-checkbox:checked + .sidebar {
-       z-index: 10;
-       visibility: visible;
-   }
-   #sidebar-checkbox:checked ~ .sidebar,
-   #sidebar-checkbox:checked ~ .sidebar-toggle {
-       @include transform(translateX(15rem))
+       #menu-trigger:checked + label {
+           @include transform(translateX(150px));
+       }
+       #menu-trigger:checked ~ .sidebar {
+           @include transform(translateX(0px));
+       }
+       #menu-trigger:checked ~ .main {
+           @include transform(translateX(150px));
+       }
+       .main {
+           @include transition(transform .3s ease);
+       }
    }
 }
 * {

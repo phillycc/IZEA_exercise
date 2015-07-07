@@ -25,5 +25,10 @@
       @include fontsize(10);
       @include lineheight(13);
     }
+    @include respond-to('mobile') {
+      @include fontsize(9);
+      @include lineheight(11);
+      padding: 1ex 8%;
+    }
   }
 }
