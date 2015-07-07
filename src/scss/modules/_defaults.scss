@@ -37,6 +37,16 @@ body {
    .main {
        @include transition(transform .3s ease);
    }
+   @include respond-to('desktop'){
+        #menu-trigger, #menu-trigger + label {
+          display: none !important;
+        }
+    }
+    @include respond-to('tablet'){
+        #menu-trigger, #menu-trigger + label {
+          display: none !important;
+        }
+    }
 }
 * {
    box-sizing: border-box;

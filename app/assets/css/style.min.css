@@ -235,6 +235,20 @@ body .main {
   transition: transform 0.3s ease;
 }
 
+@media only screen and (min-width: 1000px) {
+  body #menu-trigger,
+  body #menu-trigger + label {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  body #menu-trigger,
+  body #menu-trigger + label {
+    display: none !important;
+  }
+}
+
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -525,6 +539,7 @@ button,
 @media only screen and (max-width: 767px) {
   .main {
     width: 100% !important;
+    position: absolute !important;
   }
 }
 
