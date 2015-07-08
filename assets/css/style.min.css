@@ -183,6 +183,13 @@ html {
   position: relative;
 }
 
+@media only screen and (max-width: 767px) {
+  html {
+    min-height: unset;
+    position: static;
+  }
+}
+
 body {
   font-size: 100%;
   background: #FFF;
@@ -190,13 +197,14 @@ body {
   height: 100%;
   width: 100%;
   display: inline-block;
+  overflow-x: hidden;
 }
 
-body #menu-trigger {
+body #menu-btn {
   display: none;
 }
 
-body #menu-trigger + label {
+body #menu-btn + label {
   background-color: #333;
   color: #FFF;
   cursor: pointer;
@@ -212,19 +220,19 @@ body #menu-trigger + label {
   transition: transform 0.3s ease;
 }
 
-body #menu-trigger:checked + label {
+body #menu-btn:checked + label {
   -ms-transform: translateX(8em);
   -webkit-transform: translateX(8em);
   transform: translateX(8em);
 }
 
-body #menu-trigger:checked ~ .sidebar {
+body #menu-btn:checked ~ .sidebar {
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
-body #menu-trigger:checked ~ .main {
+body #menu-btn:checked ~ .main {
   -ms-transform: translateX(8em);
   -webkit-transform: translateX(8em);
   transform: translateX(8em);
@@ -236,15 +244,15 @@ body .main {
 }
 
 @media only screen and (min-width: 1000px) {
-  body #menu-trigger,
-  body #menu-trigger + label {
+  body #menu-btn,
+  body #menu-btn + label {
     display: none !important;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 999px) {
-  body #menu-trigger,
-  body #menu-trigger + label {
+  body #menu-btn,
+  body #menu-btn + label {
     display: none !important;
   }
 }
@@ -449,7 +457,6 @@ button,
   left: 0;
   bottom: 0;
   position: absolute;
-  overflow-x: hidden;
   overflow-y: auto;
   -o-box-shadow: 0 0 15px #000;
   -ms-box-shadow: 0 0 15px #000;
