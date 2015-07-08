@@ -212,13 +212,12 @@ body #menu-btn {
 }
 
 body #menu-btn + label {
-  background-color: #333;
-  color: #FFF;
+  background-color: #FFF;
   cursor: pointer;
-  padding: 20px 10px;
-  margin: 10px;
+  padding: 0.1em 0.2em 0 0.2em;
+  margin: 0.3em;
   position: fixed;
-  top: 0;
+  top: 0.2ex;
   left: 0;
   z-index: 1;
   -o-border-radius: 8px;
