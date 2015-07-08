@@ -7,13 +7,18 @@ html {
     }
 }
 body {
+   font-family: $font-body;
    font-size: 100%;
    background: $color-white;
-   font-family: $font-body;
-   height:100%;
-   width:100%;
-   display:inline-block;
+   height: 100%;
+   width: 100%;
+   display: inline-block;
    overflow-x: hidden;
+   @include respond-to('mobile') {
+       height: auto;
+       display: block;
+   }
+
    #menu-btn {
      display: none;
    }
@@ -53,6 +58,7 @@ body {
         }
     }
 }
+
 * {
    box-sizing: border-box;
    font-smoothing: antialiased;

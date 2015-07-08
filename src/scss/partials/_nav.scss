@@ -1,18 +1,12 @@
 .nav {
   background-color: $color-green-middle;
   width: 100%;
-  margin: 0 auto;
-  padding:0;
-  > ul {
-    padding: 0;
-    margin: 0 auto;
-  }
   a {
     @include fontsize(12);
     @include lineheight(14);
-    padding: 1.5ex 8%;
     font-weight: 300;
     text-decoration: none;
+    padding: 1.5ex 8%;
     color: $color-text-white;
     display: block;
     &:hover {
