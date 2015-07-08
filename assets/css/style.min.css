@@ -191,13 +191,20 @@ html {
 }
 
 body {
+  font-family: Helvetica, sans-serif;
   font-size: 100%;
   background: #FFF;
-  font-family: Helvetica, sans-serif;
   height: 100%;
   width: 100%;
   display: inline-block;
   overflow-x: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    height: auto;
+    display: block;
+  }
 }
 
 body #menu-btn {
@@ -402,13 +409,6 @@ button,
 .nav {
   background-color: #20A286;
   width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.nav > ul {
-  padding: 0;
-  margin: 0 auto;
 }
 
 .nav a {
@@ -416,9 +416,9 @@ button,
   font-size: 1.5rem;
   line-height: 14px;
   line-height: 1.75rem;
-  padding: 1.5ex 8%;
   font-weight: 300;
   text-decoration: none;
+  padding: 1.5ex 8%;
   color: #FFF;
   display: block;
 }
@@ -475,6 +475,7 @@ button,
     transition: transform 0.3s ease;
     box-shadow: none;
     z-index: -1;
+    overflow-x: hidden;
   }
 }
 
