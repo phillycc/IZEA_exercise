@@ -495,7 +495,7 @@ button,
 @media only screen and (max-width: 767px) {
   .sidebar h1 {
     padding: 1ex 15%;
-    color: #219078;
+    visibility: hidden;
   }
 }
 
@@ -511,10 +511,33 @@ button,
   bottom: 4ex;
 }
 
+@media only screen and (min-width: 1000px) {
+  .sidebar footer #text-cr {
+    display: inline-block;
+  }
+
+  .sidebar footer #icon-cr {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .sidebar footer #text-cr {
+    display: inline-block;
+  }
+
+  .sidebar footer #icon-cr {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 767px) {
-  .sidebar footer {
-    font-size: 7px;
-    font-size: 0.875rem;
+  .sidebar footer #text-cr {
+    display: none;
+  }
+
+  .sidebar footer #icon-cr {
+    display: inline-block;
   }
 }
 
