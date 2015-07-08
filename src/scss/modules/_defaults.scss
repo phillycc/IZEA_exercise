@@ -23,19 +23,26 @@ body {
      display: none;
    }
    #menu-btn + label {
-     background-color: #FFF;
      cursor: pointer;
-     padding: 0.1em 0.2em 0 0.2em;
-     margin: 0.3em;
      position: fixed;
      top: 0.2ex;
      left: 0;
      z-index: 1;
-     @include borderradius(8px);
      @include transition(transform .3s ease);
+     span {
+        background-color: #FFF;
+        padding: 0.1em 0.2em 0 0.2em;
+        margin: 0.3em;
+        @include borderradius(8px);
+        display: block;
+        @include transform(rotate(0));
+     }
    }
    #menu-btn:checked + label {
        @include transform(translateX(8em));
+       span {
+          @include transform(rotate(-180deg));
+       }
    }
    #menu-btn:checked ~ .sidebar {
        @include transform(translateX(0));
