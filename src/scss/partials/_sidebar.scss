@@ -1,15 +1,22 @@
 .sidebar {
     color: $color-text-white;
     background-color: $color-green-middle;
+    height: 100%;
     width: 20%;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    position:absolute;
-    overflow:hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    overflow-y: auto;
     @include boxshadow(0, 0, 15px, #000);
     @include respond-to('mobile') {
-        display: none;
+        position: fixed !important;
+        width: 8em;
+        @include transform(translateX(-8em));
+        @include transition(transform .3s ease);
+        box-shadow: none;
+        z-index: -1;
+        overflow-x: hidden;
     }
     h1 {
       background-color: $color-green-strong;
@@ -22,6 +29,10 @@
       @include respond-to('tablet') {
           @include fontsize(20, true);
       }
+      @include respond-to('mobile') {
+          padding: 1ex 15%;
+          visibility: hidden;
+      }
     }
     footer {
       width: 100%;
@@ -31,5 +42,29 @@
       text-align: center;
       position: absolute;
       bottom: 4ex;
+      @include respond-to('desktop') {
+          #text-cr {
+             display:inline-block;
+          }
+          #icon-cr {
+             display: none;
+          }
+      }
+      @include respond-to('tablet') {
+          #text-cr {
+             display:inline-block;
+          }
+          #icon-cr {
+             display: none;
+          }
+      }
+      @include respond-to('mobile') {
+          #text-cr {
+             display: none;
+          }
+          #icon-cr {
+             display: inline-block;
+          }
+      }
     }
 }

@@ -6,16 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="http://www.google-analytics.com" rel="dns-prefetch">
+    <link href="http://ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
     <script src="assets/components/modernizr.js"></script>
   </head>
   <body>
-    <header class="header" role="banner">
-        <h1>IZEA</h1>
-    </header>
+    <input id="menu-btn" type="checkbox">
+    <label for="menu-btn"><span><i class="fa fa-caret-square-o-right fa-2x"></i></span></label>
     <aside class="sidebar" role="complementary">
         <h1>IZEA</h1>
         <nav class="nav" role="navigation">
@@ -25,9 +24,12 @@
             <li><a href="#">Work at IZEA</a></li>
           </ul>
         </nav>
-        <footer>IZEA Copyright 2015</footer>
+        <footer>IZEA <span id="text-cr">Copyright&nbsp;</span><span id="icon-cr">&copy;</span>2015</footer>
     </aside>
-    <main class="main" role="main">
+    <section class="main" role="main">
+      <header class="header" role="banner">
+          <h1>IZEA</h1>
+      </header>
       <article>
           <h2>Work at IZEA</h2>
           <h3>dolor sit amet</h3>
@@ -39,16 +41,14 @@ adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
           <button>Apply Today</button>
       </article>
       <aside>
-        <img src='assets/img/exchange_logo.png' alt="">
+        <img src='assets/img/exchange_logo.png' alt="logo">
         <div class="moreinfo">
             <h3>The IZEA Exchange</h3>
             <p>Lorem ipsum dolor sit.</p>
             <a href="#">Learn more</a>
         </div>
       </aside>
-    </main>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </section>
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/js/scripts.min.js"></script>
 

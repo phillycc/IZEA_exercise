@@ -5,6 +5,7 @@
     float: right;
     @include respond-to('mobile') {
        width:100% !important;
+       position: absolute !important;
     }
     > article {
       width: 65%;

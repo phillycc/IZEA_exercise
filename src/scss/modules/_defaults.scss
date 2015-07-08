@@ -1,15 +1,70 @@
 html {
     min-height:100%;
-    position:relative
+    position:relative;
+    @include respond-to('mobile') {
+        min-height: unset;
+        position: static;
+    }
 }
 body {
+   font-family: $font-body;
    font-size: 100%;
    background: $color-white;
-   font-family: $font-body;
-   height:100%;
-   width:100%;
-   display:inline-block;
+   height: 100%;
+   width: 100%;
+   display: inline-block;
+   overflow-x: hidden;
+   @include respond-to('mobile') {
+       height: auto;
+       display: block;
+   }
+
+   #menu-btn {
+     display: none;
+   }
+   #menu-btn + label {
+     cursor: pointer;
+     position: fixed;
+     top: 0.2ex;
+     left: 0;
+     z-index: 1;
+     @include transition(transform .3s ease);
+     span {
+        background-color: #FFF;
+        padding: 0.1em 0.2em 0 0.2em;
+        margin: 0.3em;
+        @include borderradius(8px);
+        display: block;
+        @include transform(rotate(0));
+     }
+   }
+   #menu-btn:checked + label {
+       @include transform(translateX(8em));
+       span {
+          @include transform(rotate(-180deg));
+       }
+   }
+   #menu-btn:checked ~ .sidebar {
+       @include transform(translateX(0));
+   }
+   #menu-btn:checked ~ .main {
+       @include transform(translateX(8em));
+   }
+   .main {
+       @include transition(transform .3s ease);
+   }
+   @include respond-to('desktop') {
+        #menu-btn, #menu-btn + label {
+          display: none !important;
+        }
+    }
+    @include respond-to('tablet') {
+        #menu-btn, #menu-btn + label {
+          display: none !important;
+        }
+    }
 }
+
 * {
    box-sizing: border-box;
    font-smoothing: antialiased;
