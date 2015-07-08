@@ -1,29 +1,27 @@
 .nav {
   background-color: $color-green-middle;
   width: 100%;
-  margin: 0 auto;
-  padding:0;
-  > ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-  }
   a {
     @include fontsize(12);
     @include lineheight(14);
     font-weight: 300;
     text-decoration: none;
+    padding: 1.5ex 8%;
     color: $color-text-white;
     display: block;
-    width: 100%;
-    padding: 1.5ex 8%;
     &:hover {
-			background: $color-green-strong;
-			color: $color-text-white;
-		}
+      background: $color-green-strong;
+      color: $color-text-white;
+      text-decoration: none;
+    }
     @include respond-to('tablet') {
       @include fontsize(10);
       @include lineheight(13);
+    }
+    @include respond-to('mobile') {
+      @include fontsize(9);
+      @include lineheight(11);
+      padding: 1ex 8%;
     }
   }
 }
