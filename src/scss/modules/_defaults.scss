@@ -23,13 +23,12 @@ body {
      display: none;
    }
    #menu-btn + label {
-     background-color: #333;
-     color: #FFF;
+     background-color: #FFF;
      cursor: pointer;
-     padding: 20px 10px;
-     margin: 10px;
+     padding: 0.1em 0.2em 0 0.2em;
+     margin: 0.3em;
      position: fixed;
-     top: 0;
+     top: 0.2ex;
      left: 0;
      z-index: 1;
      @include borderradius(8px);
@@ -47,12 +46,12 @@ body {
    .main {
        @include transition(transform .3s ease);
    }
-   @include respond-to('desktop'){
+   @include respond-to('desktop') {
         #menu-btn, #menu-btn + label {
           display: none !important;
         }
     }
-    @include respond-to('tablet'){
+    @include respond-to('tablet') {
         #menu-btn, #menu-btn + label {
           display: none !important;
         }
