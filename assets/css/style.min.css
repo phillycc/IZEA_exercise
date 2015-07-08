@@ -212,24 +212,37 @@ body #menu-btn {
 }
 
 body #menu-btn + label {
-  background-color: #FFF;
   cursor: pointer;
-  padding: 0.1em 0.2em 0 0.2em;
-  margin: 0.3em;
   position: fixed;
   top: 0.2ex;
   left: 0;
   z-index: 1;
-  -o-border-radius: 8px;
-  border-radius: 8px;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+}
+
+body #menu-btn + label span {
+  background-color: #FFF;
+  padding: 0.1em 0.2em 0 0.2em;
+  margin: 0.3em;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  -ms-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
 }
 
 body #menu-btn:checked + label {
   -ms-transform: translateX(8em);
   -webkit-transform: translateX(8em);
   transform: translateX(8em);
+}
+
+body #menu-btn:checked + label span {
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 body #menu-btn:checked ~ .sidebar {
