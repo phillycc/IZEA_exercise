@@ -14,13 +14,10 @@
     h1 {
       font-family: $font-heading;
       color: $color-text-white;
-      font-size: 38pt;
+      @include fontsize(22, true);
       font-weight: 600;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: normal;
-      @include respond-to('mobile') {
-          font-size: 30pt !important;
-      }
     }
 }

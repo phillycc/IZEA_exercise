@@ -30,8 +30,8 @@
           @include fontsize(20, true);
       }
       @include respond-to('mobile') {
-          padding: 0.6ex 15%;
-          visibility: hidden;
+          padding: 1ex 15%;
+          color: $color-green-strong;
       }
     }
     footer {
