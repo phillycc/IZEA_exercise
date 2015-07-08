@@ -1,6 +1,10 @@
 html {
     min-height:100%;
-    position:relative
+    position:relative;
+    @include respond-to('mobile') {
+        min-height: unset;
+        position: static;
+    }
 }
 body {
    font-size: 100%;
@@ -9,10 +13,11 @@ body {
    height:100%;
    width:100%;
    display:inline-block;
-   #menu-trigger {
+   overflow-x: hidden;
+   #menu-btn {
      display: none;
    }
-   #menu-trigger + label {
+   #menu-btn + label {
      background-color: #333;
      color: #FFF;
      cursor: pointer;
@@ -25,25 +30,25 @@ body {
      @include borderradius(8px);
      @include transition(transform .3s ease);
    }
-   #menu-trigger:checked + label {
+   #menu-btn:checked + label {
        @include transform(translateX(8em));
    }
-   #menu-trigger:checked ~ .sidebar {
+   #menu-btn:checked ~ .sidebar {
        @include transform(translateX(0));
    }
-   #menu-trigger:checked ~ .main {
+   #menu-btn:checked ~ .main {
        @include transform(translateX(8em));
    }
    .main {
        @include transition(transform .3s ease);
    }
    @include respond-to('desktop'){
-        #menu-trigger, #menu-trigger + label {
+        #menu-btn, #menu-btn + label {
           display: none !important;
         }
     }
     @include respond-to('tablet'){
-        #menu-trigger, #menu-trigger + label {
+        #menu-btn, #menu-btn + label {
           display: none !important;
         }
     }

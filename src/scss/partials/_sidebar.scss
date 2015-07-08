@@ -6,8 +6,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    position:absolute;
-    overflow-x: hidden;
+    position: absolute;
     overflow-y: auto;
     @include boxshadow(0, 0, 15px, #000);
     @include respond-to('mobile') {
