@@ -17,6 +17,10 @@ Convert desktop and mobile PSDs into HTML5 Responsive page
 
 Instead of hiding the navigation menu on mobile devices, adapt it into a mobile-friendly interface of your design. You may use JavaScript to achieve your desired results.
 
+## Release 1.1.2
+
+[davidelmer.me/IZEA_exercise/](http://davidelmer.me/IZEA_exercise/)
+
 ## Production Notes
 
 * Used [Todd Motto's FireShell](http://github.com/toddmotto/fireshell) to automate the build process
